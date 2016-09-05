@@ -16,6 +16,7 @@
 		1A08C7DC1D7DA15000462ACB /* Reflect+Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08C7D41D7DA15000462ACB /* Reflect+Property.swift */; };
 		1A08C7DD1D7DA15000462ACB /* Reflect+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08C7D51D7DA15000462ACB /* Reflect+Type.swift */; };
 		1A08C7DE1D7DA15000462ACB /* Reflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08C7D61D7DA15000462ACB /* Reflect.swift */; };
+		1A08C7E01D7DA26C00462ACB /* Weibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08C7DF1D7DA26C00462ACB /* Weibo.swift */; };
 		1A60EF4F1D7C66380052C941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60EF4E1D7C66380052C941 /* AppDelegate.swift */; };
 		1A60EF561D7C66390052C941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A60EF551D7C66390052C941 /* Assets.xcassets */; };
 		1A60EF591D7C66390052C941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A60EF571D7C66390052C941 /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 		1A08C7D41D7DA15000462ACB /* Reflect+Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflect+Property.swift"; sourceTree = "<group>"; };
 		1A08C7D51D7DA15000462ACB /* Reflect+Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflect+Type.swift"; sourceTree = "<group>"; };
 		1A08C7D61D7DA15000462ACB /* Reflect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reflect.swift; sourceTree = "<group>"; };
+		1A08C7DF1D7DA26C00462ACB /* Weibo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weibo.swift; sourceTree = "<group>"; };
 		1A60EF4B1D7C66380052C941 /* Weibo_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A60EF4E1D7C66380052C941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A60EF551D7C66390052C941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		1A60EF651D7C68890052C941 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A08C7DF1D7DA26C00462ACB /* Weibo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				1A08C7D71D7DA15000462ACB /* Reflect+ArcFile.swift in Sources */,
 				1A08C7DD1D7DA15000462ACB /* Reflect+Type.swift in Sources */,
 				1A08C7DA1D7DA15000462ACB /* Reflect+Class.swift in Sources */,
+				1A08C7E01D7DA26C00462ACB /* Weibo.swift in Sources */,
 				1A08C7DC1D7DA15000462ACB /* Reflect+Property.swift in Sources */,
 				1A60EF4F1D7C66380052C941 /* AppDelegate.swift in Sources */,
 			);

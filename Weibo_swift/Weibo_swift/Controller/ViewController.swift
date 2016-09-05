@@ -9,16 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+   
+//    let tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        for weibo in WeiBoArray {
+            print(weibo.name)
+        }
+       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    lazy var WeiBoArray: [Weibo] = {
+    
+        let weibos: [Weibo]
+        
+        weibos = Weibo.plistToArray()
+        
+        return weibos
+    }()
 
 
 }
