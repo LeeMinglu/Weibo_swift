@@ -11,14 +11,24 @@ import UIKit
 class ViewController: UIViewController {
     
    
-//    let tableView: UITableView!
+    var tableView: UITableView!
+    var screen: CGRect!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.screen = UIScreen.mainScreen().bounds
+        let tableViewFrame = screen.size
+        let tableview = UITableView.init(frame: screen)
+        
+        self.tableView = tableview
+        self.tableView.backgroundColor = UIColor.blueColor()
+        
+        self.view.addSubview(self.tableView)
+        
         for weibo in WeiBoArray {
-            print(weibo.name)
+            print("&^&&&&&&&&&&&&&" + weibo.name)
         }
        
     }

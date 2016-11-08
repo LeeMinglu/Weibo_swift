@@ -22,6 +22,7 @@
 		1A60EF591D7C66390052C941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A60EF571D7C66390052C941 /* LaunchScreen.storyboard */; };
 		1A60EF621D7C68340052C941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60EF611D7C68340052C941 /* ViewController.swift */; };
 		1A60EF681D7C69840052C941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A60EF671D7C69840052C941 /* Main.storyboard */; };
+		1A9A59F11D857D9400B7BCF1 /* LSWeiboFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A59F01D857D9400B7BCF1 /* LSWeiboFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1A60EF5A1D7C66390052C941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A60EF611D7C68340052C941 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A60EF671D7C69840052C941 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1A9A59F01D857D9400B7BCF1 /* LSWeiboFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSWeiboFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				1A08C7DF1D7DA26C00462ACB /* Weibo.swift */,
+				1A9A59F01D857D9400B7BCF1 /* LSWeiboFrame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 		1A60EF431D7C66380052C941 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LS;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = SocererGroup;
@@ -199,6 +203,7 @@
 					1A60EF4A1D7C66380052C941 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = T9A27F8Q5D;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -248,6 +253,7 @@
 				1A08C7DD1D7DA15000462ACB /* Reflect+Type.swift in Sources */,
 				1A08C7DA1D7DA15000462ACB /* Reflect+Class.swift in Sources */,
 				1A08C7E01D7DA26C00462ACB /* Weibo.swift in Sources */,
+				1A9A59F11D857D9400B7BCF1 /* LSWeiboFrame.swift in Sources */,
 				1A08C7DC1D7DA15000462ACB /* Reflect+Property.swift in Sources */,
 				1A60EF4F1D7C66380052C941 /* AppDelegate.swift in Sources */,
 			);
@@ -358,6 +364,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SocererGroup.Weibo-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -369,6 +376,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SocererGroup.Weibo-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
