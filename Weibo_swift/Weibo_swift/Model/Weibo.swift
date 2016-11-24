@@ -13,12 +13,14 @@ class Weibo: Reflect {
     var text: String
     var icon: String
     var name: String
+    var picture: String
     var vip: Bool
     
     required init() {
         self.text = ""
         self.icon = ""
         self.name = ""
+        self.picture = ""
         self.vip = false
     }
     

@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
    
     var tableView: UITableView!
     var screen: CGRect!
-    var weiboModel: [Weibo]!
+    var weiboFrames: [LSWeiboFrame]!
     let indentifier = "weibo"
     
 
@@ -25,14 +25,20 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         let tableview = UITableView.init(frame: screen)
         
         self.tableView = tableview
-        self.tableView.backgroundColor = UIColor.blueColor()
+        self.tableView.rowHeight = 200
+//        self.tableView.backgroundColor = UIColor.blueColor()
         
         self.view.addSubview(self.tableView)
         
-        self.tableView.registerClass(UITableViewCell.in, forCellReuseIdentifier: indentifier)
+        self.tableView.registerClass(LSWeiboCell.self, forCellReuseIdentifier: indentifier)
         
-        self.weiboModel = WeiBoArray
-//        
+        self.weiboFrames = WeiBoFramesArray
+        
+        //遵守协议
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        
+//
 //        for weibo in WeiBoArray {
 //            print("&^&&&&&&&&&&&&&" + weibo.name)
 //        }
@@ -46,13 +52,36 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.weiboModel.count
+        return self.weiboFrames.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let weibo = self.weiboModel[indexPath.row]
-         print("&^&&&&&&&&&&&&&" + weibo.name)
         
+        /*
+        let cell = tableView.dequeueReusableCellWithIdentifier(indentifier, forIndexPath: indexPath) as! LSWeiboCell
+ */
+        let cell = LSWeiboCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: indentifier)
+        let weiboFrame = self.weiboFrames[indexPath.row]
+        let weibo = weiboFrame.weibo
+//         print("&^&&&&&&&&&&&&&" + weiboFrame.weibo.name)
+        cell.weiboFrame = weiboFrame
+        
+        
+        
+
+        
+        print("%%%%%%" + weibo.name + "\(CGRectGetMaxX(weiboFrame.iconFrame))" + "\(CGRectGetMaxX(weiboFrame.iconFrame))")
+        
+        
+        return cell
+        
+        
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let frame = self.weiboFrames[indexPath.row]
+        print("\(frame.weibo.name)" + "的高度是" + "\(frame.picFrame?.height)")
+        return frame.cellHeight
     }
     
     
@@ -63,13 +92,21 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     }
     
     //懒加载模型数据
-    lazy var WeiBoArray: [Weibo] = {
+    lazy var WeiBoFramesArray: [LSWeiboFrame] = {
     
         let weibos: [Weibo]
         
         weibos = Weibo.plistToArray()
         
-        return weibos
+        var weiboFrames: [LSWeiboFrame] = []
+        for weibo in weibos {
+            let weiboFrame = LSWeiboFrame.init()
+            weiboFrame.weibo = weibo
+            weiboFrames.append(weiboFrame)
+        }
+        
+        
+        return weiboFrames
     }()
 
 
